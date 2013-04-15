@@ -3,9 +3,6 @@ layout: default
 ---
 
 <div class="row">
-  {% if page.sidebar and site.sidebar_posn == "left" %}
-    {% include sidebar.html %}
-  {% endif %}
   <div class="{% if page.sidebar == false %}span12{% else %}span8{% endif %}">
     {% if page.title %}
       <div class="page-header">
@@ -36,7 +33,5 @@ layout: default
       </section>
     {% endif %}
   </div>
-  {% if page.sidebar and site.sidebar_posn != "left" %}
-    {% include sidebar.html %}
-  {% endif %}
+  {% include sidebar.html %}
 </div>
