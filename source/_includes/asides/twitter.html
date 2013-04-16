@@ -1,8 +1,8 @@
 {% if site.twitter_user %}
 <section>
-  <h2>Latest Tweets</h2>
+  <h2><i class="icon-twitter"></i>  Latest Tweets</h2>
   <ul id="tweets">
-    <li class="loading">Status updating...</li>
+    <li class="loading"><i class="icon-spinner icon-spin"></i> Status updating...</li>
   </ul>
   {% if site.twitter_follow_button %}
     <a href="http://twitter.com/{{ site.twitter_user }}" class="twitter-follow-button" data-show-count="{{ site.twitter_show_follower_count }}">Follow @{{ site.twitter_user }}</a>
