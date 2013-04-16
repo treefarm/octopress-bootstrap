@@ -9,7 +9,7 @@
       <div class="nav-collapse">
         {% include custom/navigation.html %}
         {% if site.simple_search %}
-          <form action="{{ site.simple_search }}" method="get" class="navbar-search pull-left">
+          <form action="{{ site.simple_search }}" method="get" class="navbar-search pull-right">
             <fieldset role="search">
               <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
               <div class="icon-ph"><i class="icon-search"></i></div>

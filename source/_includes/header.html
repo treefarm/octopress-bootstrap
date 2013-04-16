@@ -11,12 +11,27 @@
       {% endif %}
       {% if site.twitter_user %}
       <td><a href="http://twitter.com/{{site.twitter_user}}" class="btn"><i class="icon-twitter-sign"></i> On Twitter</a></td>
+      <td>&nbsp;</td>
       {% endif %}
     </tr>
   </table>
 </div>
 {% endif %}
-<h1 class="title">{{ site.title }}</h1>
-{% if site.subtitle %}
-  <p class="lead">{{ site.subtitle }}</p>
+{% if site.logo %}
+<table>
+  <tr>
+    <th><img src="{{ site.logo }}"></img></th>
+    <th>
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}
+      <p class="lead">{{ site.subtitle }}</p>
+      {% endif %}
+    </th>
+  </tr>
+</table>
+{%  else %}
+  <h1 class="title">{{ site.title }}</h1>
+  {% if site.subtitle %}
+    <p class="lead">{{ site.subtitle }}</p>
+  {% endif %}
 {% endif %}
