@@ -1,4 +1,12 @@
+# Synopsis
+
 This is a theme for the blogging framework [Octopress](https://github.com/imathis/octopress) that is based on [Twitter Bootstrap](http://twitter.github.com/bootstrap/).
+
+This theme is an extended version of the excellent one proposed by [Brian Armstrong](https://github.com/barmstrong/octopress-bootstrap) tweaked to suit my tastes (in particular to add some glyphicons etc.)
+
+---------
+# Original text from Brian: 
+
 
 ### It was extracted from my [blog](https://github.com/barmstrong/blog) and looks like this:
 
