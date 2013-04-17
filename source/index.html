@@ -1,28 +1,53 @@
 ---
 layout: default
 ---
-
-{% if site.sidebar_posn == "left" %}
-  {% include sidebar.html %}
-{% endif %}
-<div class="blog-index">
-  {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
-  {% endfor %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+<div class="row">
+  <div class="{% if page.sidebar == false %}span12{% else %}span8{% endif %}">
+    {% if page.title %}
+    <div class="page-header">
+      <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
+    </div>
     {% endif %}
-    <a href="/blog/archives">Blog Archives</a>
-    {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+
+    <div class="blog-index">
+      {% assign index = true %}
+      {% for post in paginator.posts %}
+      {% assign content = post.content %}
+      <article>
+        {% include article.html %}
+      </article>
+      {% endfor %}
+      <div class="pagination">
+        {% if paginator.next_page %}
+        <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+        {% endif %}
+        <a href="/blog/archives">Blog Archives</a>
+        {% if paginator.previous_page %}
+        <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% unless page.footer == false %}
+      <footer>
+        {% if page.date or page.author %}<p class="meta">
+          {% if page.author %}{% include post/author.html %}{% endif %}
+          {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+          {% if page.categories %}{% include post/categories.html %}{% endif %}
+        </p>{% endif %}
+        {% unless page.sharing == false %}
+          {% include post/sharing.html %}
+        {% endunless %}
+      </footer>
+    {% endunless %}
+    
+    {% if site.disqus_short_name and page.comments == true %}
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+      </section>
     {% endif %}
   </div>
-</div>
-{% if site.sidebar_posn != "left" %}
   {% include sidebar.html %}
-{% endif %}
+</div>
