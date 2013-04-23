@@ -1,0 +1,16 @@
+# -*- mode: yaml -*-
+################################################################################
+# gitflow.yml - YAML configuration file for Gitflow 
+################################################################################
+
+:gitflow:
+  :branches:
+    :master: production
+    :develop: master
+  :prefix:
+    :feature: feature/
+    :release: release/
+    :hotfix:  hotfix/
+    :support: support/
+    :versiontag: v,
+

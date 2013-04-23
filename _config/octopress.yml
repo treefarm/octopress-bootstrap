@@ -1,0 +1,16 @@
+# -*- mode: yaml -*-
+################################################################################
+# config.yaml - YAML configuration file for Octopress layout
+################################################################################
+
+:octopress:
+  :public_dir: public
+  :source_dir: source
+  :blog_index_dir: source
+  :deploy_dir: _deploy
+  :stash_dir: _stash
+  :posts_dir: _posts
+  :themes_dir: .themes
+  :new_post_ext: md
+  :new_page_ext: md
+  :server_port: 4000
