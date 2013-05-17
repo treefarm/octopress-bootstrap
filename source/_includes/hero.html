@@ -12,3 +12,12 @@ Some cool hero title!
 Some more text that is descriptive about what one might find here.
 {% endif %}
 </p>
+{% if site.hero_hide_button != true %}
+	<p><a href="{% if site.hero_button_href %}{{ site.hero_button_href }}{% else %}#{% endif %}" class="btn btn-primary btn-large">
+	{% if site.hero_button_label %}
+	{{ site.hero_button_label }}
+	{% else %}
+	Learn more
+	{% endif %}
+	&raquo;</a></p>
+{% endif %}
