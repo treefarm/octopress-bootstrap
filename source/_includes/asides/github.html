@@ -1,6 +1,6 @@
 {% if site.github_user %}
 <section>
-  <h2><i class="icon-github-alt"></i>  GitHub Repos</h2>
+  <h2><i class="icon-github-alt"></i>&nbsp;&nbsp;GitHub Repos</h2>
   <ul id="gh_repos">
     <li class="loading"><i class="icon-spinner icon-spin"></i> Status updating...</li>
   </ul>
@@ -13,6 +13,7 @@
             user: '{{site.github_user}}',
             count: {{site.github_repo_count}},
             skip_forks: {{site.github_skip_forks}},
+            site_repo: '{{site.github_site_repo}}',
             target: '#gh_repos'
         });
     });

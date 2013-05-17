@@ -20,7 +20,11 @@ var github = (function(){
           var repos = [];
           if (!data || !data.data) { return; }
           for (var i = 0; i < data.data.length; i++) {
-            if (options.skip_forks && data.data[i].fork) { continue; }
+            if (options.skip_forks && data.data[i].fork
+                || (options.site_repo != null 
+                  && (data.data[i].name.valueOf() === options.site_repo.valueOf()))) { 
+              continue; 
+            }
             repos.push(data.data[i]);
           }
           if (options.count) { repos.splice(options.count); }
