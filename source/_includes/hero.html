@@ -12,7 +12,7 @@ Some cool hero title!
 Some more text that is descriptive about what one might find here.
 {% endif %}
 </p>
-{% if site.hero_hide_button != true %}
+{% unless site.hero_hide_button == false %}
 	<p><a href="{% if site.hero_button_href %}{{ site.hero_button_href }}{% else %}#{% endif %}" class="btn btn-primary btn-large">
 	{% if site.hero_button_label %}
 	{{ site.hero_button_label }}
@@ -20,4 +20,4 @@ Some more text that is descriptive about what one might find here.
 	Learn more
 	{% endif %}
 	&raquo;</a></p>
-{% endif %}
+{% endunless %}
