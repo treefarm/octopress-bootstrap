@@ -29,6 +29,8 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 .dl-horizontal dt { width: 135px; }
 
 
+
+
 .hero-unit {
   background-image: image-url('hero.jpg');
   color: #ffffff;
@@ -59,9 +61,8 @@ h6 {
   text-transform: lowercase;
 }
 
-.sidebar .span4 {
-  font-size: 40px;
-  font-family: inherit;
+.sidebar .btn {
+  min-width: 150px;  
 }
 
 .navbar .brand {
