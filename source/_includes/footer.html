@@ -1,4 +1,6 @@
 <p>
-  &copy; {{ site.time | date: "%Y" }} - {{ site.title }} -
+  &copy; {{ site.time | date: "%Y" }} - {{ site.title }}{% if site.subtitle %} - {{ site.subtitle }}{% endif %}
+</p>
+<p>
   <span class="credit">powered by <a href="http://octopress.org">octopress</a></span>
 </p>
