@@ -2,11 +2,38 @@
 // To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
 // If you need a handy color picker try http://hslpicker.com
 
-//$header-bg: #263347;
-//$subtitle-color: lighten($header-bg, 58);
-//$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
-//$nav-bg-front: image-url('noise.png');
-//$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
+$header-bg: #263347;
+$subtitle-color: lighten($header-bg, 58);
+$title-color: #000000;
+$meta-color: lighten($title-color, 50);
+//$nav-bg: desaturate(lighten(#562D0E, 18), 5);
+$nav-bg: #3E2315;
+$nav-bg-front: image-url('noise.png');
+$nav-bg-back: linear-gradient(lighten($nav-bg, 3), $nav-bg, darken($nav-bg, 3));
+$nav-text-color: #BDC5B5;
+$nav-text-color-active: lighten($nav-text-color, 50);
+$nav-bg-color-hover: darken($nav-bg, 10);
+$nav-bg-color-active: darken($nav-bg, 5);
+
+$well-bg: lighten($nav-text-color, 20);
+$well-border: #e3e3e3;
+
+$btn-color: $nav-bg-color-active;
+$btn-bg: lighten($nav-text-color, 20);
+$btn-bg-darker: darken($btn-bg, 10);
+$btn-bg-hover: lighten($nav-text-color, 15);
+$btn-bg-hover-darker: darken($btn-bg-hover, 10);
+$btn-bg-disabled: lighten($nav-text-color, 5);
+$btn-bg-disabled-darker: darken($btn-bg-disabled, 10);
+$btn-bg-active: darken($nav-text-color, 5);
+
+$link-color: #704C20;
+$link-hover-color: #A79459;
+$dropdown-bg-color: darken($link-color, 10);
+
+$search-color: $nav-bg-color-hover;
+$search-bg: darken($nav-text-color, 10);
+
 //$sidebar-bg: desaturate(#eceff5, 8);
 //$sidebar-link-color: saturate(#526f9a, 10);
 //$sidebar-link-color-hover: darken(#7ab662, 9);

@@ -1,5 +1,166 @@
+$hero-bg: image-url('hero.jpg') !default;
+
+
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+
+a {
+  color: $link-color;
+}
+
+a:hover,
+a:focus {
+  color: $link-hover-color;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: $dropdown-bg-color;
+  background-image: -moz-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($link-color), to($dropdown-bg-color));
+  background-image: -webkit-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: -o-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: linear-gradient(to bottom, $link-color, $dropdown-bg-color);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff$link-color', endColorstr='$dropdown-bg-color', GradientType=0);
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: $dropdown-bg-color;
+  background-image: -moz-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($link-color), to($dropdown-bg-color));
+  background-image: -webkit-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: -o-linear-gradient(top, $link-color, $dropdown-bg-color);
+  background-image: linear-gradient(to bottom, $link-color, $dropdown-bg-color);
+  background-repeat: repeat-x;
+  outline: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff$link-color', endColorstr='$dropdown-bg-color', GradientType=0);
+}
+
+
+.navbar-inverse .navbar-search .search-query {
+  color: $search-color;
+  background-color: $search-bg;
+}
+
+.btn {
+  color: $btn-color;
+  background-color: $btn-bg;
+  *background-color: $btn-bg-darker;
+  background-image: -moz-linear-gradient(top, #ffffff, $btn-bg-darker);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to($btn-bg-darker));
+  background-image: -webkit-linear-gradient(top, #ffffff, $btn-bg-darker);
+  background-image: -o-linear-gradient(top, #ffffff, $btn-bg-darker);
+  background-image: linear-gradient(to bottom, #ffffff, $btn-bg-darker);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 $btn-bg-darker #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ff$btn-bg-darker', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: $btn-color;
+  background-color: $btn-bg-hover;
+  *background-color: $btn-bg-hover-darker;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 0;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+.btn:active,
+.btn.active {
+  background-color: $btn-bg-active \9;
+}
+
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active {
+  background-color: $btn-bg-active \9;
+}
+
+.navbar-inverse .navbar-search .search-query:-moz-placeholder {
+  color: $btn-bg;
+}
+
+.navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+  color: $btn-bg;
+}
+
+.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
+  color: $btn-bg;
+}
+
+
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: $nav-text-color;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inverse .nav-collapse .nav > li > a:hover,
+  .navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    background-color: $nav-bg-color-hover;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  color: $nav-text-color-active;
+  background-color: $nav-bg-color-active;
+}
+
+.well {
+  background-color: $well-bg;
+  border: 1px solid $well-border;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+p.meta {
+  color: $meta-color;
+  font-size: 10px;  
+}
 
 // Add back the social sharing CSS
 .sharing {
@@ -28,20 +189,34 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 // Add a little horizontal space in dt elements
 .dl-horizontal dt { width: 135px; }
 
+body {
+  //@include hidpi(debut_light);
+  @include hidpi(lightpaperfibers);
+}
 
+.navbar-inverse .navbar-inner {
+  background-color: #2c0000; /* fallback color, place your own */
+
+  @include background($nav-bg-front, $nav-bg-back);
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$nav-bg-front', endColorstr='$nav-bg-back', GradientType=0);
+}
 
 
 .hero-unit {
-  background-image: image-url('hero.jpg');
+  @include hidpi(hero);
+  //background-image: $hero-bg;
   color: #ffffff;
-  text-shadow: 0 1px 0 #000000;
+  font-weight: bold;
+  text-shadow: 0 1px 1px #000000;
 }
 
 .hero-unit h1 {
-  font-family: 'Just Another Hand', cursive;
+  font-family: $brand-font-family, cursive;
   font-size: 50.0px;
   color: #ffffff;
-  text-shadow: 0 1px 1px #000000;
+  text-shadow: 0 1px 2px #000000;
 }
 
 .hero-unit .btn {
@@ -57,7 +232,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Just Another Hand', cursive;
+  /*font-family: $brand-font-family, cursive;*/
   text-transform: lowercase;
 }
 
@@ -68,27 +243,27 @@ h6 {
 .navbar .brand {
   /*padding: 10px 20px 10px;*/
   font-size: 25px;
-  font-family: 'Just Another Hand', cursive;
+  font-family: $brand-font-family, cursive;
 }
 
 /*.navbar .nav > li > a {
   font-size: 24px;
-  font-family: 'Just Another Hand', cursive;
+  font-family: $brand-font-family, cursive;
 }*/
-.hero-unit .btn-primary {
-  background-color: hsl(75, 55%, 14%) !important;
+.btn-primary {
+  background-color: hsl(140, 4%, 51%) !important;
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b6e20", endColorstr="#2d3710");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#5b6e20), to(#2d3710));
-  background-image: -moz-linear-gradient(top, #5b6e20, #2d3710);
-  background-image: -ms-linear-gradient(top, #5b6e20, #2d3710);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b6e20), color-stop(100%, #2d3710));
-  background-image: -webkit-linear-gradient(top, #5b6e20, #2d3710);
-  background-image: -o-linear-gradient(top, #5b6e20, #2d3710);
-  background-image: linear-gradient(#5b6e20, #2d3710);
-  border-color: #2d3710 #2d3710 hsl(75, 55%, 10.5%);
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b2b8b4", endColorstr="#7d8780");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b2b8b4), to(#7d8780));
+  background-image: -moz-linear-gradient(top, #b2b8b4, #7d8780);
+  background-image: -ms-linear-gradient(top, #b2b8b4, #7d8780);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b2b8b4), color-stop(100%, #7d8780));
+  background-image: -webkit-linear-gradient(top, #b2b8b4, #7d8780);
+  background-image: -o-linear-gradient(top, #b2b8b4, #7d8780);
+  background-image: linear-gradient(#b2b8b4, #7d8780);
+  border-color: #7d8780 #7d8780 hsl(140, 4%, 46%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
   -webkit-font-smoothing: antialiased;
 }
 
